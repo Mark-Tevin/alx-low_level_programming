@@ -5,7 +5,7 @@
  * @s: string
  * Return: length of a string
  */
-int is_palindrome(char *s)
+int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
 		return (0);
@@ -20,7 +20,7 @@ int is_palindrome(char *s)
  */
 int comparator(char *s, int n1, int n2)
 {
-	if (*(s + n1) == *s(s + n2))
+	if (*(s + n1) == *(s + n2))
 	{
 		if (n1 == n2 || n1 == n2 + 1)
 			return (1);
