@@ -4,26 +4,20 @@
 
 /**
  * create_array - creates an array of characters
- * @s: size of the array
+ * @size: size of the array
  * @c: character to fill the array
- * Return: 0
+ * Return: pointer to array
  */
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
 	char *s;
 
-	if (size == 0)
-		return (NULL);
-
-	s = malloc(size * sizeof(char));
-
-	if (s == NULL)
+	s = malloc(sizeof(char) * size);
+	if (size == 0 || s == NULL)
 		return (NULL);
 
 	for (i = 0; i < size; i++)
-	{
 		s[i] = c;
-	}
 	return (s);
 }
