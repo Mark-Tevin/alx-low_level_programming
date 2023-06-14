@@ -6,32 +6,24 @@
  * _strdup - string duplicate
  * @str: string to be duplicated
  *
- * Return: string duplicate
+ * Return: string duplicate or NULL if memory allocation fails
  */
 char *_strdup(char *str)
 {
-	int a = 0, i = 1;
-	char *s;
+	char *tt;
+	int i, r = 0;
 
 	if (str == NULL)
 		return (NULL);
-
-	while (str[i])
-	{
+	i = 0;
+	while (str[i] != '\0')
 		i++;
-	}
+	tt = malloc(sizeof(char) * (i + 1));
 
-	s = malloc((sizeof(char) * 1) + 1);
-
-	if (s == NULL)
+	if (tt == NULL)
 		return (NULL);
-
-	while (a < i)
-	{
-		s[a] = str[a];
-		a++;
-	}
-
-	s[a] = '\0';
-	return (s);
+	for (r = 0; str[r]; r++)
+		tt[r] = str[r];
+	return (tt);
 }
+
