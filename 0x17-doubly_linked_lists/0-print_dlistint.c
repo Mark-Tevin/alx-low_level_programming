@@ -1,6 +1,6 @@
 #include "lists.h"
+#include <stdlib.h>
 #include <stdio.h>
-#include <stddef.h>
 
 /* prints all elements in doubly linked list and return number of nodes */
 size_t print_dlistint(const dlistint_t *h)
