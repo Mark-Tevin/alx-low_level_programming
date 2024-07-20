@@ -13,6 +13,7 @@
  *
  * Description: Prints the [sub]array being searched after each change
  */
+
 int binary_search(int *array, size_t size, int value)
 {
 	size_t i, left, right;
@@ -22,7 +23,7 @@ int binary_search(int *array, size_t size, int value)
 
 	for (left = 0, right = size - 1; right >= left;)
 	{
-		printf("Searching in array");
+		printf("Searching in array: ");
 		for (i = left; i < right; i++)
 			printf("%d, ", array[i]);
 		printf("%d\n", array[i]);
